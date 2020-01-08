@@ -10,9 +10,9 @@ class GUI extends JFrame implements ActionListener {
 	    static JLabel l;
 
 	    public static void main(String[] args) {
-	    	f = new JFrame("Event Planner"); 
+	    	f = new JFrame("Event Planner");
 	        l = new JLabel("No Classes Registered");
-	        b = new JButton("submit");
+	        b = new JButton("Submit Courses");
 	        GUI te = new GUI();
 	        b.addActionListener(te);
 	        course = new JTextField("Enter your class",16);
@@ -31,7 +31,7 @@ class GUI extends JFrame implements ActionListener {
 	    public void actionPerformed(ActionEvent e)
 	    {
 	    	String s = e.getActionCommand();
-	    	if (s.equals("submit")) {
+	    	if (s.equals("Submit Courses")) {
 	    		l.setText(course.getText()+" from "+timestart.getText()+" to "+timeend.getText());
 	    		course.setText("  ");
 	    		timestart.setText("  ");
