@@ -4,15 +4,15 @@ public class Course {
 	String name;
 	int timestart;
 	int timeend;
-	ArrayList<Course> courses;
 
 	Course(String n, int ts, int te){
-		n = name;
-		ts = timestart;
-		te = timeend;
+		name = n;
+		timestart = ts;
+		timeend = te;
 	}
-	void addCourse(Course c) {
+	ArrayList<Course> addCourse(ArrayList<Course> courses,Course c) {
 		courses.add(c);
+		return courses;
 	}
 
 	Course getCourse(Course c) {
@@ -26,4 +26,23 @@ public class Course {
 		return c;
 	}
 
+	int getTimeStart(Course c) {
+		return timestart;
+	}
+
+	int getTimeEnd(Course c) {
+		return timeend;
+	}
+
+	int getTimeDiff(Course c) {
+		return getTimeEnd(c) - getTimeStart(c);
+	}
+
+	String getName() {
+		return name;
+	}
+
+	boolean checkValidTime(int timest, int timeend) {
+		return true;
+	}
 }
